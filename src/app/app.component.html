@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<h1>Employees :{{employees}}</h1>
+
+<li *ngFor="let emp of employees">
+  Employee :: {{emp}}
+</li>
+
+<h2 [ngClass]="{pass: mypass==='nag'}">Enter password</h2>
+<input type="password" [(ngModel)]="mypass"/>
+
+<ul *ngIf="mypass==='nag'">
+  <li *ngFor="let emp of employees">
+  Employee :: {{emp}}
+</li>
+</ul>
+
+<h2 [ngStyle]="{color: mypass==='nag'?'green' :'red'}">Online</h2>
+
+<span CDustomDirective>this is CUSTOOM DIRECTIVE</span>
